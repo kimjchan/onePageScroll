@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    *{
+      font-family: "Noto Sans KR", sans-serif; 
+    }
+    .paper{
+      clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 80% 100%, 0 100%, 0% 80%, 0% 20%);
+    }
+    .paper_2{
+      clip-path: polygon(30% 0%, 100% 0, 100% 30%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0% 30%);
+    }
+    .move{
+      animation-name: move;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: unset;
+    }
+    @keyframes move {
+      from {
+        transform: translateX(0);
+      }
+      to{
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav fixed w-full h-[100px] top-0 lef-0 bg-gray-200 px-[50px] flex items-center z-30 bg-opacity-50">
+    <div class="h-[40px] w-full flex justify-between">
+      <div class="w-[105px] h-full overflow-hidden">
+        <img src="./img/logo.png" alt="logo" class="translate-y-[-20px]"/>
+      </div>
+      <ul class="flex justisfy-between gap-24 items-center">
+        <li>
+          <a class="text-xl" href="#">About Me</a>
+        </li>
+        <li>
+          <a class="text-xl" href="#">Introduce</a>
+        </li>
+        <li>
+          <a class="text-xl" href="#">Service</a>
+        </li>
+        <li>
+          <a class="text-xl" href="#">Apply Me</a>
+        </li>
+      </ul>
+      <div class="flex gap-4 items-center">
+        <span class="material-symbols-outlined text-2xl cursor-pointer">
+          share
+        </span>
+        <span class="material-symbols-outlined text-2xl cursor-pointer">
+          menu
+        </span>
+      </div>
+    </div>
+  </nav>
+  <div class="w-full bg-cyan-100 relative paper overflow-hidden">
+    <div class="flex duration-500">
+      <img src="./img/banner.jpg" class="w-full"/>
+      <img src="./img/banner02.jpg" class="w-full"/>
+      <img src="./img/banner03.jpg" class="w-full"/>
+    </div>
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-3"></div>
+    <div class="absolute top-[260px] left-[186px]">
+      <h2 class="text-5xl font-bold text-white">Value Partner</h2>
+      <p class="text-4xl mt-6 text-white">Lorem ipsum dolor sit amet consectetur,<br/> adipisicing elit. Recusandae, quam?</p>
+      <p class="mt-6 text-xl text-white"><span class="text-gray-300">Lorem ipsum dolor</span> sit amet consectetur,<br/> adipisicing elit. Recusandae, quam?</p>
+    </div>
+    <div class="absolute top-[600px] left-[186px] flex gap-9">
+      <div class="text-gray-400"><span class="text-white">02</span>/04</div>
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-white text-sm cursor-pointer hover:bg-white hover:text-gray-600 border border-solid border-white px-3 rounded-xl">
+          arrow_back_ios
+        </span>
+        <span class="material-symbols-outlined text-white text-sm cursor-pointer hover:bg-white hover:text-gray-600 border border-solid border-white px-3 rounded-xl">
+          arrow_forward_ios
+        </span>
+      </div>
+    </div>
+
+  </div>
+  <div class="w-full h-screen bg-white relative pt-[160px]">
+    <h2 class="text-4xl font-bold h-16 text-center">Lorem, ipsum dolor.</h2>
+    <div class="mt-3">
+      <h3 class="text-2xl font-medium text-gray-600 text-center">Lorem ipsum dolor sit amet consectetur.</h3>
+      <p class="text-xl font-medium text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <ul class="w-[1400px] mx-auto h-[375px] flex justify-between gap-9 mt-12">
+      <li class="relative w-full h-full bg-pink-300 rounded-2xl paper_2 overflow-hidden" style="background-image: url(./img/industry01.jpg); background-size: cover; background-position: center;">
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-3"></div>
+        <p class="w-full text-2xl font-bold text-white text-center absolute bottom-9">항공</p>
+      </li>
+      <li class="relative w-full h-full bg-pink-300 rounded-2xl paper_2 overflow-hidden" style="background-image: url(./img/industry02.jpg); background-size: cover; background-position: center;">
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-3"></div>
+        <p class="w-full text-2xl font-bold text-white text-center absolute bottom-9">유통/레저</p>
+      </li>
+      <li class="relative w-full h-full bg-pink-300 rounded-2xl paper_2 overflow-hidden" style="background-image: url(./img/industry03.jpg); background-size: cover; background-position: center;">
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-3"></div>
+        <p class="w-full text-2xl font-bold text-white text-center absolute bottom-9">화학</p>
+      </li>
+      <li class="relative w-full h-full bg-pink-300 rounded-2xl paper_2 overflow-hidden" style="background-image: url(./img/industry04.jpg); background-size: cover; background-position: center;">
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-3"></div>
+        <p class="w-full text-2xl font-bold text-white text-center absolute bottom-9">건강</p>
+      </li>
+      <li class="relative w-full h-full bg-pink-300 rounded-2xl paper_2 overflow-hidden" style="background-image: url(./img/industry05.jpg); background-size: cover; background-position: center;">
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-3"></div>
+        <p class="w-full text-2xl font-bold text-white text-center absolute bottom-9">자연</p>
+      </li>
+    </ul>
+  </div>
+  <div class="w-full h-screen bg-gray-100 relative pt-[160px]">
+    <h2 class="text-4xl font-bold h-16 text-center">Lorem, ipsum dolor.</h2>
+    <div class="mt-3">
+      <h3 class="text-2xl font-medium text-gray-600 text-center">Lorem ipsum dolor sit amet consectetur.</h3>
+      <p class="text-xl font-medium text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <ul class="w-[1400px] mx-auto h-[375px] flex justify-between mt-12 gap-9">
+      <li class="w-full h-full hover:shadow-xl duration-300 rounded-2xl shadow-md flex justify-center items-center">
+        <div class="flex flex-col gap-6 items-center">
+          <span class="material-symbols-outlined text-6xl">
+            account_circle
+          </span>
+          <h2 class="text-3xl text-gray-500 text-bold">account_circle</h2>
+        </div>
+      </li>
+      <li class="w-full h-full hover:shadow-xl duration-300 rounded-2xl shadow-md flex justify-center items-center">
+        <div class="flex flex-col gap-6 items-center">
+          <span class="material-symbols-outlined text-6xl">
+            recycling
+          </span>
+          <h2 class="text-3xl text-gray-500 text-bold">recycling</h2>
+        </div>
+      </li>
+      <li class="w-full h-full hover:shadow-xl duration-300 rounded-2xl shadow-md flex justify-center items-center">
+        <div class="flex flex-col gap-6 items-center">
+          <span class="material-symbols-outlined text-6xl">
+            cloud_upload
+          </span>
+          <h2 class="text-3xl text-gray-500 text-bold">cloud_upload</h2>
+        </div>
+      </li>
+      <li class="w-full h-full hover:shadow-xl duration-300 rounded-2xl shadow-md flex justify-center items-center">
+        <div class="flex flex-col gap-6 items-center">
+          <span class="material-symbols-outlined text-6xl">
+            update
+          </span>
+          <h2 class="text-3xl text-gray-500 text-bold">update</h2>
+        </div>
+      </li>
+      <li class="w-full h-full hover:shadow-xl duration-300 rounded-2xl shadow-md flex justify-center items-center">
+        <div class="flex flex-col gap-6 items-center">
+          <span class="material-symbols-outlined text-6xl">
+            language
+          </span>
+          <h2 class="text-3xl text-gray-500 text-bold">language</h2>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="w-full h-screen bg-gray-100 relative pt-[160px]">
+    <h2 class="text-4xl font-bold h-16 text-center">Lorem, ipsum dolor.</h2>
+    <div class="mt-3">
+      <h3 class="text-2xl font-medium text-gray-600 text-center">Lorem ipsum dolor sit amet consectetur.</h3>
+    </div>
+    <div class="w-full h-[375px] relative">
+      <span class="material-symbols-outlined absolute flex flex-col justify-center h-full left-[510px] cursor-pointer">
+        arrow_back_ios
+      </span>
+      <span class="material-symbols-outlined absolute flex flex-col justify-center h-full right-[505px] cursor-pointer">
+        arrow_forward_ios
+      </span>
+      <ul class="w-full h-[375px] flex justify-between mt-12">
+        <li class="w-[180px] h-full rounded-2xl shadow-md overflow-hidden p-9">
+          <div class="w-[300px] flex flex-col h-full gap-6 translate-x-[-120px] opacity-50">
+            <h2 class="text-2xl font-semibold">
+              Lorem ipsum, dolor sit amet consectetur
+            </h2>
+            <div class="w-full h-[1px] bg-gray-300"></div>
+            <p class="text-md">Lorem ipsum dolor sit amet consectetur quidem necessitatibus?</p>
+          </div>
+        </li>
+        <li class="w-[300px] h-full rounded-2xl shadow-md p-9">
+          <div class="flex flex-col h-full gap-6">
+            <h2 class="text-2xl font-semibold">
+              Lorem ipsum, dolor sit amet consectetur
+            </h2>
+            <div class="w-full h-[1px] bg-gray-300"></div>
+            <p class="text-md">Lorem ipsum dolor sit amet consectetur quidem necessitatibus?</p>
+          </div>
+        </li>
+        <li class="w-[450px] h-full rounded-2xl shadow-md p-9 bg-blue-800">
+          <div class="flex flex-col justify-between h-full">
+            <h2 class="text-2xl font-semibold text-white">
+              Lorem ipsum, dolor sit amet consectetur
+            </h2>
+            <div class="w-full h-[1px] bg-white"></div>
+            <p class="text-md text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis officia mollitia vel esse autem aspernatur voluptas atque maiores rem. Unde, id dolorum. Magnam tempora dolores eum commodi quidem necessitatibus?</p>
+            <a href="#" class="w-auto text-md text-white border border-solid border-white p-3">Detail Views</a>
+          </div>
+        </li>
+        <li class="w-[300px] h-full rounded-2xl shadow-md p-9">
+          <div class="flex flex-col h-full gap-6">
+            <h2 class="text-2xl font-semibold">
+              Lorem ipsum, dolor sit amet consectetur
+            </h2>
+            <div class="w-full h-[1px] bg-gray-300"></div>
+            <p class="text-md">Lorem ipsum dolor sit amet consectetur quidem necessitatibus?</p>
+          </div>
+        </li>
+        <li class="w-[180px] h-full rounded-2xl shadow-md overflow-hidden p-9">
+          <div class="w-[300px] flex flex-col h-full gap-6 opacity-50">
+            <h2 class="text-2xl font-semibold">
+              Lorem ipsum, dolor sit amet consectetur
+            </h2>
+            <div class="w-full h-[1px] bg-gray-300"></div>
+            <p class="text-md">Lorem ipsum dolor sit amet consectetur quidem necessitatibus?</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="h-[140px] border-t border-solid border-gray-300 px-16 flex justify-center items-center">
+    <div class="h-12 w-full flex justify-between gap-40">
+      <div class="w-[250px] h-full overflow-hidden">
+        <img src="./img/logo.png" alt="logo" class="translate-y-[-20px]"/>
+      </div>
+      <div class="w-full h-full overflow-hidden ">
+        <ul class="flex h-full gap-6 move">
+          <li class="w-[200px] flex-shrink-0 h-full">
+          </li>
+          <li class="w-[200px] flex-shrink-0 border border-solid border-gray-300 h-full">
+            <img src="/img/ban_logo.png" class="translate-y-[-20px]">
+          </li>
+          <li class="w-[200px] flex-shrink-0 border border-solid border-gray-300h-full">
+            <img src="/img/ban_logo.png" class="translate-y-[-20px]">
+          </li>
+          <li class="w-[200px] flex-shrink-0 border border-solid border-gray-300h-full">
+            <img src="/img/ban_logo.png" class="translate-y-[-20px]">
+          </li>
+          <li class="w-[200px] flex-shrink-0 border border-solid border-gray-300h-full">
+            <img src="/img/ban_logo.png" class="translate-y-[-20px]">
+          </li>
+          <li class="w-[200px] flex-shrink-0 border border-solid border-gray-300h-full">
+            <img src="/img/ban_logo.png" class="translate-y-[-20px]">
+          </li>
+          <li class="w-[200px] flex-shrink-0 border border-solid border-gray-300h-full">
+            <img src="/img/ban_logo.png" class="translate-y-[-20px]">
+          </li>
+          <li class="w-[200px] flex-shrink-0 h-full">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="p-6 bg-gray-100 p-9">
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-bold text-md">Lorem</p>
+        <p class="text-semibold text-md text-gray-600">Lorem ipsum dolor sit amet. | t:02-0000-0000 | f:051-0000-0000</p>
+        <p class="text-semibold text-md text-gray-500">copyright</p>
+      </div>
+      <div class="flex gap-6 items-center">
+        <a class="text-blue-600" href="#">개인정보처리방침</a>
+        <a href="#">공지사항</a>
+        <a href="#">NEWS</a>
+        <a href="#">Contact Us</a>
+        <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+    </div>
+
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>  
+  <script>
+    window.addEventListener('scroll', () => { 
+      const navEl = document.querySelector('.nav');
+       if(window.scrollY>100){
+        navEl.classList.remove('bg-opacity-50');
+       }else{
+        navEl.classList.add('bg-opacity-50');
+       }
+    });
+  </script>
+</body>
+
+</html>
